@@ -1,0 +1,23 @@
+{
+  "name": "combinations-generator",
+  "version": "1.0.0",
+  "description": "a simple javascript api to get all possible combinations",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "generateCombinations"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matubu/combinations-generator.git"
+  },
+  "keywords": [
+    "generateCombinations",
+    "generateCombinationsSequence"
+  ],
+  "author": "Matubu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Matubu/combinations-generator/issues"
+  },
+  "homepage": "https://github.com/Matubu/combinations-generator#readme"
+}
