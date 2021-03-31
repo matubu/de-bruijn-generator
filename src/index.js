@@ -3,8 +3,7 @@
  *
  * @param {array|number} k - set or length of the set
  * @param {int} n - Combinations digits length
- * @param {bool=false} n - If true you will get the entire combination else only the new digit
- * @returns {array} An array of the array combinations
+ * @param {bool=false} sequence - If true you will get the entire combination else only the new digit
  */
 
 module.exports.deBruijn = function* (k, n, sequence) {
