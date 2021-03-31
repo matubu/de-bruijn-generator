@@ -1,19 +1,19 @@
 //the proper way of finding your brand name :
-const generator = require('../src'),
+const { deBruijn } = require('../src'),
   alphabet = [...'abcdefghijklmnopqrstuvwxyz'];
 
-let gen = generator.deBruijn(alphabet, 3, true);
+let generator = deBruijn(alphabet, 3, true);
 
 function soundGood() {
   return Math.random() > .999//really efficient
 }
 
-let word = gen.next().value;
+let word = generator.next().value;
 while (word != undefined) {
   word = word.join('');
   if (soundGood(word)) {
     console.log('Your new brand name should be :', word);
     break;
   }
-  word = gen.next().value;
+  word = generator.next().value;
 }

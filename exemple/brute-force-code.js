@@ -1,4 +1,4 @@
-const generator = require('../src'),
+const { deBruijn } = require('../src'),
   codeLength = 6;
 
 class CodePadlock  {
@@ -16,13 +16,13 @@ class CodePadlock  {
   }
 }
 
-let gen = generator.deBruijn(10, codeLength),
+let generator = deBruijn(10, codeLength),
   codePadlock = new CodePadlock(codeLength);
 
 console.time('Took')
-let v = gen.next().value;
+let v = generator.next().value;
 while (v != undefined) {
-  v = gen.next().value;
+  v = generator.next().value;
   if (codePadlock.test(v)) break;
 }
 console.log('The code is ' + codePadlock.codeInput);

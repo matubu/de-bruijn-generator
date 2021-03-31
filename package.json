@@ -1,23 +1,22 @@
 {
-  "name": "combinations-generator",
+  "name": "de-bruijn-js-generator",
   "version": "1.0.0",
-  "description": "a simple javascript api to get all possible combinations",
+  "description": "A javascript implementation of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence) algorithm",
   "main": "./src/index.js",
   "scripts": {
-    "test": "generateCombinations"
+    "test": "deBruijn"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Matubu/combinations-generator.git"
+    "url": "git+https://github.com/Matubu/de-bruijn-js-generator.git"
   },
   "keywords": [
-    "generateCombinations",
-    "generateCombinationsSequence"
+    "deBruijn"
   ],
   "author": "Matubu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Matubu/combinations-generator/issues"
+    "url": "https://github.com/Matubu/de-bruijn-js-generator/issues"
   },
-  "homepage": "https://github.com/Matubu/combinations-generator#readme"
+  "homepage": "https://github.com/Matubu/de-bruijn-js-generator#readme"
 }
