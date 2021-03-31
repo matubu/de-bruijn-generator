@@ -20,9 +20,9 @@ while (value != undefined) {
 # Methods
 
 The only method provided is call `deBruijn` it take three arguments :
-  1. `k` is the alphabet (as an array) or the max digit (excluded)
-  2. `n` is the length of the code
-  3. `s` is optional (false by default), if true the entire code will be returned at every iterations
+  - `k` is the alphabet (as an array) or the max digit (excluded)
+  - `n` is the length of the code
+  - `s` is optional (false by default), if true the entire code will be returned at every iterations
 
 # Install :
 
