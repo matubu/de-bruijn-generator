@@ -1,5 +1,20 @@
 //https://en.wikipedia.org/wiki/De_Bruijn_sequence
-//callback
+function step(t, p, a, n, kl, callback) {
+  if (t > n) {
+    if (n % p == 0) {
+      for (let j = 1; j <= p; j++) {
+        callback(a[j]);
+      }
+    }
+  } else {
+    a[t] = a[t - p];
+    step(t + 1, p, a, n, kl, callback);
+    for (let j = a[t - p] + 1; j < kl; j++) {
+      a[t] = j;
+      step(t + 1, t, a, n, kl, callback);
+    }
+  }
+}
 /**
  *
  * @param {array|number} k - set or length of the set
@@ -9,30 +24,20 @@
 module.exports.generateCombinations = (k, n) => {
   console.time('generateCombinations')
 
-  if (typeof k == 'number') k = [...Array(5).keys()].map(v => v.toString());
-  let kl = k.length,
-    res = k[kl - 1].repeat(n),
+  let ka = (typeof k == 'number') ? [...Array(k).keys()].map(v => v.toString()) : k,
+    kl = ka.length,
+    res = ka[kl - 1].repeat(n),
     a = new Array(kl * n).fill(0),
     sequence = new Array(kl ** n),
     pos = 0;
 
-  (function db(t, p) {
-    if (t > n) {
-      if (n % p == 0) {
-        for (let j = 1; j <= p; j++) {
-          res = res.slice(1) + k[a[j]];
-          sequence[pos++] = res;
-        }
-      }
-    } else {
-      a[t] = a[t - p];
-      db(t + 1, p);
-      for (let j = a[t - p] + 1; j < kl; j++) {
-        a[t] = j;
-        db(t + 1, t);
-      }
-    }
-  })(1, 1);
+  step(1, 1, a, n, kl, (typeof k == 'number') ? v => {
+    res = res.slice(1) + v;
+    sequence[pos++] = res
+  } : v => {
+    res = res.slice(1) + ka[v];
+    sequence[pos++] = res
+  })
 
   console.timeEnd('generateCombinations')
   return sequence
@@ -46,26 +51,13 @@ module.exports.generateCombinations = (k, n) => {
 module.exports.deBruijn = (k, n) => {
   console.time('deBruijn')
 
-  if (typeof k == 'number') k = [...Array(5).keys()].map(v => v.toString());
-  let kl = k.length,
+  let ka = (typeof k == 'number') ? [...Array(k).keys()].map(v => v.toString()) : k,
+    kl = ka.length,
     a = new Array(kl * n).fill(0),
     sequence = new Array(kl ** n),
     pos = 0;
 
-  (function db(t, p) {
-    if (t > n) {
-      if (n % p == 0) {
-        for (let j = 1; j <= p; j++) sequence[pos++] = k[a[j]];
-      }
-    } else {
-      a[t] = a[t - p];
-      db(t + 1, p);
-      for (let j = a[t - p] + 1; j < kl; j++) {
-        a[t] = j;
-        db(t + 1, t);
-      }
-    }
-  })(1, 1);
+  step(1, 1, a, n, kl, (typeof k == 'number') ? v => sequence[pos++] = v : v => sequence[pos++] = ka[v]);
 
   console.timeEnd('deBruijn')
   return sequence
