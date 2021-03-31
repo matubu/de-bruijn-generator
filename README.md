@@ -1,2 +1,2 @@
-# combinations-generator
-A simple javascript api to get all possible combinations
+# De Bruijn sequence js generator
+A javascript implementation of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence) algorithm
