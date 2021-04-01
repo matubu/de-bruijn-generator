@@ -1,5 +1,5 @@
 {
-  "name": "de-bruijn-js-generator",
+  "name": "de-bruijn-generator",
   "version": "1.0.0",
   "description": "A javascript implementation of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence) algorithm",
   "main": "./src/index.js",
@@ -8,15 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Matubu/de-bruijn-js-generator.git"
+    "url": "git+https://github.com/matubu/de-bruijn-generator.git"
   },
   "keywords": [
     "deBruijn"
   ],
-  "author": "Matubu",
+  "author": "matubu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Matubu/de-bruijn-js-generator/issues"
+    "url": "https://github.com/matubu/de-bruijn-generator/issues"
   },
-  "homepage": "https://github.com/Matubu/de-bruijn-js-generator#readme"
+  "homepage": "https://github.com/matubu/de-bruijn-generator#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
