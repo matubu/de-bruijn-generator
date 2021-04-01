@@ -1,8 +1,9 @@
 //the proper way of finding your brand name :
 const { deBruijn } = require('../src'),
-  alphabet = [...'abcdefghijklmnopqrstuvwxyz'];
+  alphabet = [...'abcdefghijklmnopqrstuvwxyz'],
+  brandNameLength = 3;
 
-let generator = deBruijn(alphabet, 3, true);
+let generator = deBruijn(alphabet, brandNameLength, true);
 
 function soundGood() {
   return Math.random() > .999//really efficient
