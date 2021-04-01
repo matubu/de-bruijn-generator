@@ -25,6 +25,7 @@ The only method provided is call `deBruijn` it take three arguments :
 
 # Install :
 
+With [npm](https://www.npmjs.com/package/de-bruijn-generator)
 ```
 npm install de-bruijn-generator
 ```
