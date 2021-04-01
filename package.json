@@ -1,11 +1,8 @@
 {
   "name": "de-bruijn-generator",
   "version": "1.0.0",
-  "description": "A javascript implementation of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence) algorithm",
+  "description": "A javascript implementation of the de Bruijn sequence algorithm",
   "main": "./src/index.js",
-  "scripts": {
-    "test": "deBruijn"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matubu/de-bruijn-generator.git"
