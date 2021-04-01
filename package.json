@@ -1,5 +1,5 @@
 {
-  "name": "@matubu/de-bruijn-generator",
+  "name": "de-bruijn-generator",
   "version": "1.0.0",
   "description": "A javascript implementation of the de Bruijn sequence algorithm",
   "main": "./src/index.js",
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/matubu/de-bruijn-generator/issues"
   },
-  "homepage": "https://github.com/matubu/de-bruijn-generator#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "homepage": "https://github.com/matubu/de-bruijn-generator#readme"
 }
