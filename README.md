@@ -29,3 +29,12 @@ With [npm](https://www.npmjs.com/package/de-bruijn-generator)
 ```
 npm install de-bruijn-generator
 ```
+
+On browser
+``` html
+<script src="./src/index.js"></script>
+```
+``` js
+let generator = deBruijnGenerator.deBruijn(10, 8);
+generator.next().value;
+```
