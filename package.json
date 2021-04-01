@@ -1,5 +1,5 @@
 {
-  "name": "@de-bruijn-generator/de-bruijn-generator",
+  "name": "@matubu/de-bruijn-generator",
   "version": "1.0.0",
   "description": "A javascript implementation of the de Bruijn sequence algorithm",
   "main": "./src/index.js",
