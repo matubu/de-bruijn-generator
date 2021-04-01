@@ -11,13 +11,14 @@
     "node": "~15.4.0"
   },
   "keywords": [
+    "nodejs",
     "javascript",
-    "node js",
+    "algorithm",
+    "browser",
     "generator",
-    "de bruijn",
-    "de bruijn sequence",
-    "modern javascript",
-    "combinations"
+    "combinations",
+    "sequence",
+    "debruijn"
   ],
   "author": "matubu",
   "license": "MIT",
