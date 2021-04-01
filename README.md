@@ -11,8 +11,7 @@ let generator = deBruijn(10, 8); // create a generator for a 8 digits code in ba
 let value = generator.next().value;
 
 while (value != undefined) {
-  value = generator.next().value;
-  // here value contain only the new digit
+  value = generator.next().value; // here value contain only the new digit
   console.log(value);
 }
 ```
@@ -27,5 +26,5 @@ The only method provided is call `deBruijn` it take three arguments :
 # Install :
 
 ```
-npm install de-bruijn-js-generator
+npm install de-bruijn-generator
 ```
