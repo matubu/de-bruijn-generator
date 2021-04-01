@@ -1,7 +1,7 @@
 # De Bruijn sequence javascript generator
 A javascript implementation of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence) algorithm
 
-# Exemple :
+## Exemple :
 
 ``` js
 const { deBruijn } = require('de-bruijn-js-generator');
@@ -16,14 +16,14 @@ while (value != undefined) {
 }
 ```
 
-# Methods
+## Methods
 
 The only method provided is call `deBruijn` it take three arguments :
   - `k` is the alphabet (as an array) or the max digit (excluded)
   - `n` is the length of the code
   - `s` is optional (false by default), if true the entire code will be returned at every iterations
 
-# Install :
+## Install :
 
 With [npm](https://www.npmjs.com/package/de-bruijn-generator)
 ```
