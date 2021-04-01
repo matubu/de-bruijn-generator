@@ -7,8 +7,15 @@
     "type": "git",
     "url": "git+https://github.com/matubu/de-bruijn-generator.git"
   },
+  "engines" : { "node" : "~15.4.0" },
   "keywords": [
-    "deBruijn"
+    "javascript",
+    "node js",
+    "generator",
+    "de bruijn",
+    "de bruijn sequence",
+    "modern javascript",
+    "combinations"
   ],
   "author": "matubu",
   "license": "MIT",
