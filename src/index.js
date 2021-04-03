@@ -11,32 +11,32 @@
    * @param {bool=false} s - If true you will get the entire combination else only the new digit
    */
   exports.deBruijn = function* (k, n, s) {
-      let ktype = typeof k != 'number',
-        kl = ktype ? k.length : k,
-        a = new Array(kl * n).fill(0);
+    let ktype = typeof k != 'number',
+      kl = ktype ? k.length : k,
+      a = new Array(kl * n).fill(0);
 
     s = s ? new Array(n).fill(ktype ? k[kl - 1] : kl - 1) : null;
 
-      yield* (function* step(t, p) {
-        if (t > n) {
-          if (n % p == 0) {
-            for (let j = 1; j <= p; j++) {
-              let v = ktype ? k[a[j]] : a[j];
-              if (s) {
-                s.shift()
-                s.push(v)
-              }
-              yield s ?? v
+    yield* (function* step(t, p) {
+      if (t > n) {
+        if (n % p == 0) {
+          for (let j = 1; j <= p; j++) {
+            let v = ktype ? k[a[j]] : a[j];
+            if (s) {
+              s.shift()
+              s.push(v)
             }
-          }
-        } else {
-          a[t] = a[t - p];
-          yield* step(t + 1, p);
-          for (let j = a[t - p] + 1; j < kl; j++) {
-            a[t] = j;
-            yield* step(t + 1, t);
+            yield s ?? v
           }
         }
-      })(1, 1)
-    }
-  }));
+      } else {
+        a[t] = a[t - p];
+        yield* step(t + 1, p);
+        for (let j = a[t - p] + 1; j < kl; j++) {
+          a[t] = j;
+          yield* step(t + 1, t);
+        }
+      }
+    })(1, 1)
+  }
+}));
