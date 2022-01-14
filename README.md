@@ -4,7 +4,7 @@
 ## Exemple :
 
 ``` js
-const { deBruijn } = require('de-bruijn-js-generator');
+const { deBruijn } = require('de-bruijn-generator');
 
 let generator = deBruijn(10, 8), value; // create a generator for a 8 digits code in base 10
 // if the third argument is true you will get the entire code every time
